@@ -2,7 +2,10 @@
 {% load humanize %}
 {% block title %}Homepage - {{ block.super }}{% endblock %}
 {% block content %}
-	<h1>Hello World!</h1>
-	<p>There are {{ number|apnumber }} dogs!</p>
-	<p>This is my name: {{ name }}</p>
+	{% for recipe in recipes %}
+	<h2><a href="{% url 'recipe_detail' slug=recipe.slug %}">
+		{{ recipe.name }}
+	</a></h2>
+	<p>{{ thing.description }}</p>
+	{% endfor %}
 {% endblock %}

@@ -10,5 +10,11 @@ urlpatterns = [
 	url(r'^contact/$', 
 		TemplateView.as_view(template_name='contact.html'),
 		name='contact'),
+	url(r'^recipes/(?P<slug>[-\w]+)/edit/$', 
+		'recipieoptimizer.views.recipe_detail',
+		name='recipe_detail'),
+	url(r'^recipes/(?P<slug>[-\w]+)/$', 
+		'recipieoptimizer.views.edit_recipe',
+		name='edit_recipe'),
     url(r'^admin/', include(admin.site.urls)),
 ]
