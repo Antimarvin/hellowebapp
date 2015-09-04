@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from recipieoptimizer.forms import RecipeForm
 from recipieoptimizer.models import Recipe
 
@@ -26,7 +26,7 @@ def edit_recipe(request, slug):
 	if request.method == 'POST':
 		# grab the data from the submitted form
 		form = form_class(data=request.POST, instance=recipe)
-		if form.is_valid()
+		if form.is_valid():
 			# save the new data
 			form.save()
 			return redirect('recipe_detail', slug=recipe.slug)
@@ -36,6 +36,6 @@ def edit_recipe(request, slug):
 		form = form_class(instance=recipe)
 		
 	return render(request, 'recipes/edit_recipe.html', {
-		'recipe': recipe
-		'form': form
+		'recipe': recipe,
+		'form': form,
 	})
