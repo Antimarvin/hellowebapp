@@ -4,4 +4,5 @@
 {% block content %}
 	<h1>{{ recipe.name }}</h1>
 	<p> {{ recipe.description }}</p>
+	<a href="{% url 'edit_recipe' slug=recipe.slug %}">Edit me!</a>
 {% endblock %}
