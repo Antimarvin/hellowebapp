@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from recipieoptimizer.forms import RecipeForm
-from recipieoptimizer.models import Recipe
+from recipeoptimizer.forms import RecipeForm
+from recipeoptimizer.models import Recipe
 
 # Create your views here.
 def index(request):

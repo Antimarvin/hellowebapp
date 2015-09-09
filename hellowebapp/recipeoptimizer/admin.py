@@ -1,5 +1,5 @@
 from django.contrib import admin
-from recipieoptimizer.models import Recipe
+from recipeoptimizer.models import Recipe
 # Register your models here.
 
 class RecipeAdmin(admin.ModelAdmin):
