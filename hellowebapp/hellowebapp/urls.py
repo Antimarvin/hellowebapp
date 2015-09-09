@@ -16,5 +16,6 @@ urlpatterns = [
 	url(r'^recipes/(?P<slug>[-\w]+)/$', 
 		'recipeoptimizer.views.edit_recipe',
 		name='edit_recipe'),
+	url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
